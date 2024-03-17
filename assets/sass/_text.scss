@@ -1,0 +1,88 @@
+@import 'variables';
+@import 'mixins';
+
+/* ------- */
+/* Textos */
+/* ------- */
+header {
+    span {
+        letter-spacing: 2px;
+        font-style: italic;
+        font-weight: 200;
+        cursor: default;
+    }
+}
+
+.izquierda-contenido {
+    p {
+        @include infoTexts;
+        margin-left: 2%;
+    }
+}
+
+.msnTexto {
+    font-weight: bolder;
+    letter-spacing: $l-spacing;
+    font-size: 1.3em;
+}
+
+.catTexto {
+    display: none;
+}
+
+.resultado {
+    h2 {
+        cursor: default;
+        color: $black;
+        letter-spacing: $l-spacing;
+    }
+
+    .showResult {
+        text-align: center;
+    }
+}
+
+.fa-heart {
+    font-size: 2em;
+    color: $black;
+}
+
+.info {
+    p {
+        @include infoTexts;
+    }
+
+    i {
+        font-size: 0.9em;
+        color: $black;
+        margin-right: 2px;
+    }
+}
+
+.sm-header {
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.nav-item {
+    margin-inline: 1rem;
+    opacity: 0;
+    transition: transform $fives, opacity $fives;
+
+    &:nth-child(odd) {
+        transform: translateY(5rem);
+    }
+
+    &:nth-child(even) {
+        transform: translateY(-5rem);
+    }
+
+    .nav-link {
+        font-size: 2rem;
+    }
+}
+
+@include tablet-only-text;

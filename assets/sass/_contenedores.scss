@@ -1,0 +1,149 @@
+@import 'mixins';
+
+/* ------------ */
+/* Contenedores */
+/* ------------ */
+
+#canv {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+@include canv-movile;
+
+body, html {
+    overflow: hidden;
+}
+
+header {
+    @include flex-spacebetween-center;
+    position: absolute;
+    width: 96%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    padding: 1%;
+}
+
+#contenedor {
+    @include flex-row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 80%;
+    gap: 60px;
+}
+
+#izquierda {
+    @include container-styles;
+    width: 60%;
+}
+
+#derecha {
+    @include container-styles;
+    @include flex-center-column;
+    justify-content: center;
+    width: 40%;
+    gap: 5%;
+}
+
+.izquierda-contenido {
+    @include fullScreen;
+    @include flex-column;
+    padding: 1%;
+    gap: 3%;
+}
+
+.mainbttns {
+    @include flex-evenly;
+}
+
+.resultadoOculto {
+    @include flex-column;
+    @include center-center;
+    gap: 3%;
+    width: 95%;
+    height: 95%;
+}
+
+.resultado {
+    @include flex-column;
+    align-items: center;
+    gap: 5%;
+    width: 95%;
+    height: 60%;
+}
+
+.showResult {
+    width: 100%;
+    height: 75%;
+    color: $black;
+    letter-spacing: $l-spacing;
+    background-color: $bg-show;
+    border-radius: 20px;
+    -webkit-backdrop-filter: $blur;
+    backdrop-filter: $blur;
+    padding: 2%;
+}
+
+.copia {
+    @include flex-column;
+    height: 25%;
+    justify-content: center;
+    align-content: center;
+    gap: 15%;
+}
+
+.info {
+    text-align: left;
+    cursor: default;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    position: absolute;
+    bottom: 1.5%;
+    left: 1.5%;
+    max-width: 80rem;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+
+    &:hover {
+        pointer-events: auto;
+    }
+
+    &:hover .line {
+        transform: scaleX(1);
+    }
+
+    &:hover .nav-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.line {
+    width: 8rem;
+    height: 1px;
+    background-color: $black;
+    margin-left: 0.5rem;
+    transform: scaleX(0.4);
+    transform-origin: left;
+    transition: transform $fives;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+@include tablet-only-containeres;
+@include min-queries;

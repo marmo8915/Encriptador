@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="https://kit.fontawesome.com/3117b56b4e.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="img/bitmapalura.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <title>Encriptador</title>
+</head>
+<body>
+  <header>
+    <img src="img/Vector@2x.svg" alt="" class="aluraLogo">
+    <h1>ENCRIPTADOR BY MARMO</h1>
+    <span class="hashtag">#Codificador</span>
+  </header>
+  
+  <main id="contenedor">
+    <section id="izquierda">
+			<div class="izquierda-contenido">
+				<textarea placeholder="Ingresa el texto aqui:"></textarea>
+				<p><i class="fa-solid fa-arrow-right"></i> Esta app solo admite minúsculas sin acentos ni caracteres especiales.</p>
+				<div class="mainbttns">
+					<button id="btn-d"><i class="fa-solid fa-unlock"></i> Desencriptar</button>
+					<button id="btn-e"><i class="fa-solid fa-lock"></i> Encriptar</button>
+          <button id="btn-f"><i class="fa fa-refresh" aria-hidden="true"></i>Reiniciar</button>
+				</div>
+			</div>
+    </section>
+    
+    <section id="derecha">
+      <img src="img/logo.webp" alt="" id ="vector" class="vector">
+      <p id="msnTexto" class="msnTexto">QUE QUIERES ENCRIPTAR?</p>
+      <div class="resultadoOculto oculto" id="resultadoOculto">
+        <div class="resultado">
+          <h2>El texto encriptado es:</h2>
+          <p class="showResult" id="showResult"></p>
+        </div>
+        <div class="copia">
+          <div class="info">
+            <p><i class="fa-solid fa-arrow-right"></i> Copia el resultado en el campo de texto para desencriptar o ingresa un nuevo texto para encriptar.</p>
+          </div>
+          <div class="boton">
+            <button id="btn-c"><i class="fa-regular fa-clipboard"></i> Copiar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+	<nav class="nav">
+    <h4 class="sm-header">Contacto</h4>
+    <div class="line"></div>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="linkedin.com/in/jefferson-marmolejo-castrillon-43298316b" target="_blank" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+      </li>
+      <li class="nav-item">
+        <a href="https://github.com/marmo8915" target="_blank" class="nav-link"><i class="fa-brands fa-github"></i></a>
+      </li>      
+    </ul>
+  </nav>
+  
+  <div class="toast">
+    <div class="toast-content">
+      <i class="fas fa-solid fa-check check"></i>
+      <div class="message">
+        <span class="text text-1">¡Perfecto, tu mensaje ha sido copiado</span>
+        <span class="text text-2">Continuemos.</span>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark close"></i>
+    <div class="progress"></div>
+  </div>
+  
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

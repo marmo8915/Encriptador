@@ -1,0 +1,21 @@
+@import 'mixins';
+
+/* -------- */
+/* Imagenes */
+/* -------- */
+header {
+    img {
+        width: 2%;
+    }
+}
+
+.vector {
+    width: 75%;
+}
+
+
+.vectorCat {
+    display: none;
+}
+
+@include tablet-only-images;

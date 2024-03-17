@@ -1,0 +1,19 @@
+@import 'variables';
+
+/* -------- */
+/* textarea */
+/* -------- */
+textarea {
+    width: 100%;
+    height: 75%;
+    resize: none;
+    border: none;
+    background: transparent;
+    letter-spacing: $l-spacing;
+    padding: 3%;
+    font-weight: bolder;
+
+    &:focus {
+        outline: none;
+    }
+}
